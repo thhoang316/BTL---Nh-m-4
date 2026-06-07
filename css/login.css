@@ -1,0 +1,111 @@
+body {
+  background-color: #fcfbfa; /* Màu nền trắng kem nhẹ nhã nhặn */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Section bọc toàn bộ trang auth */
+.auth-page {
+  width: 100%;
+  padding: 20px 0;
+}
+
+/* Hộp đăng nhập (Login Box) */
+.auth-box {
+  max-width: 420px;
+  background: #ffffff;
+  padding: 40px 35px;
+  border-radius: 12px; /* Bo góc hiện đại, mềm mại */
+  /* Đổ bóng nhẹ nhàng, tinh tế thay vì bóng đen thô cứng */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid #f1f0ea;
+}
+
+/* Tiêu đề "Login" */
+.auth-box h2 {
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #111111;
+  font-size: 28px;
+  position: relative;
+  margin-bottom: 35px !important;
+}
+
+/* Dấu chấm cam tinh tế dưới chữ Login tạo điểm nhấn thương hiệu giống FURNI. */
+.auth-box h2::after {
+  content: ".";
+  color: #cda577; /* Màu vàng beige/cam nhạt sang trọng */
+}
+
+/* Label của các ô nhập liệu */
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #666666;
+  margin-bottom: 8px;
+}
+
+/* Các ô Input (Email, Password) */
+.form-control {
+  height: 46px;
+  background-color: #f8f8f8;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hiệu ứng khi nhấn vào ô Input */
+.form-control:focus {
+  background-color: #ffffff;
+  border-color: #111111; /* Đổi sang viền đen tối giản */
+  box-shadow: none; /* Xóa bỏ viền xanh mặc định của bootstrap */
+}
+
+/* Nút Login (Được tùy biến từ .btn-dark) */
+.btn-dark {
+  background-color: #111625; /* Màu xanh đen đậm cực sang giống nút Mua sắm ngay */
+  border: none;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+
+/* Hiệu ứng di chuột qua nút */
+.btn-dark:hover,
+.btn-dark:focus {
+  background-color: #cda577 !important; /* Chuyển sang màu cam beige ấm áp */
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(205, 165, 119, 0.3);
+}
+
+/* Phần text điều hướng "Don't have account? Register" */
+.auth-box p {
+  font-size: 14px;
+  color: #777777;
+}
+
+.auth-box p a {
+  color: #111625;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+/* Hiệu ứng hover link Register */
+.auth-box p a:hover {
+  color: #cda577;
+  text-decoration: none;
+  border-bottom: 1px solid #cda577;
+}

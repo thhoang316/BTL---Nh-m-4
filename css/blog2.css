@@ -1,0 +1,562 @@
+/* ==========================================================================
+   1. RESET & ĐỊNH DẠNG CHUNG
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   2. GIAO DIỆN THANH HEADER (CĂN GIỮA ĐẸP)
+   ========================================================================== */
+.main-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    width: 100%;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 800;
+    color: #111111;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #c2996b;
+    text-decoration: none;
+    border: 1px solid #e2d1be;
+    padding: 10px 22px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #c2996b;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   3. HERO BANNER (FIX LỖI HIỂN THỊ)
+   ========================================================================== */
+.hero-banner {
+    max-width: 1200px;
+    height: 520px;
+    margin: 0 auto 50px auto;
+    background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.35)), url('../img/Banner2.png'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    width: 100%;
+}
+
+.banner-content {
+    max-width: 550px;
+    color: #ffffff;
+}
+
+.banner-title {
+    font-size: 54px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    line-height: 1.1;
+}
+
+.banner-sub {
+    font-size: 18px;
+    margin: 0 0 35px 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-collection {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #111111;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-collection:hover {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   4. NỘI DUNG BÀI VIẾT (CỐ ĐỊNH CĂN GIỮA CHUẨN KHÔNG LỆCH)
+   ========================================================================== */
+.blog-container {
+    max-width: 850px;
+    margin: 0 auto 80px auto; /* Luôn luôn căn giữa */
+    padding: 0 20px;
+    width: 100%;
+    display: block; /* Trả về block chuẩn */
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-categories {
+    font-size: 12px;
+    color: #c2996b;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.blog-main-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #111111;
+    margin: 0 0 15px 0;
+}
+
+.blog-meta {
+    font-size: 13.5px;
+    color: #777777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.meta-divider {
+    color: #dddddd;
+}
+
+.blog-body-content p {
+    font-size: 16.5px;
+    line-height: 1.8;
+    color: #444444;
+    text-align: justify;
+    margin-bottom: 22px;
+}
+
+.blog-body-content .lead-text {
+    font-size: 18px;
+    color: #111111;
+    font-weight: 500;
+}
+
+.blog-body-content h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111111;
+    margin: 45px 0 15px 0;
+}
+
+.blog-quote {
+    background-color: #fbf9f6;
+    border-left: 3px solid #c2996b;
+    padding: 20px 25px;
+    margin: 35px 0;
+    font-style: italic;
+    color: #555555;
+}
+
+/* Khung ảnh bài viết */
+.blog-image-wrapper {
+    margin: 30px 0;
+}
+
+.blog-placeholder-image {
+    width: 100%;
+    height: 400px;
+    background-color: #f0f0f2;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #888888;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.blog-placeholder-image i {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #b0b0b5;
+}
+
+/* ==========================================================================
+   5. PHẦN BÌNH LUẬN (GIAO DIỆN PHẲNG)
+   ========================================================================== */
+.comment-section {
+    margin-top: 60px;
+    border-top: 1px solid #eeeeee;
+    padding-top: 40px;
+}
+
+.comment-section h3 {
+    font-size: 20px;
+    color: #111111;
+    margin-bottom: 25px;
+}
+
+.comment-list {
+    margin-bottom: 40px;
+}
+
+.comment-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #eeeeee;
+}
+
+.comment-avatar {
+    width: 45px;
+    height: 45px;
+    background-color: #f0f0f2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaaaaa;
+    flex-shrink: 0;
+}
+
+.comment-content h5 {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    color: #111111;
+}
+
+.comment-time {
+    font-size: 12px;
+    color: #999999;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.comment-content p {
+    margin: 0;
+    font-size: 14.5px;
+    color: #555555;
+    line-height: 1.5;
+}
+
+/* Form phản hồi */
+.comment-form h4 {
+    font-size: 18px;
+    color: #111111;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.comment-form textarea,
+.comment-form input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.comment-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.comment-form textarea:focus,
+.comment-form input:focus {
+    border-color: #c2996b;
+}
+
+.btn-submit {
+    background-color: #111111;
+    color: #ffffff;
+    border: none;
+    padding: 14px 30px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #c2996b;
+}
+
+/* ==========================================================================
+   6. PHẦN CHÂN TRANG (MÀU TRẮNG CHUẨN - 4 CỘT DÀN NGANG FLEXBOX)
+   ========================================================================== */
+footer {
+    background-color: #ffffff !important;
+    color: #555555 !important;
+    padding: 60px 0 30px 0;
+    margin-top: 100px;
+    width: 100%;
+    border-top: 1px solid #eeeeee !important;
+}
+
+/* Khối 4 cột dùng Flexbox để triệt tiêu lỗi lệch dòng của bài viết ở trên */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1; /* Chia đều độ rộng 4 cột bằng nhau */
+}
+
+.footer-column h3 {
+    color: #111111 !important;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 15px 0;
+    color: #555555 !important;
+}
+
+.footer-contact {
+    color: #c2996b !important;
+    font-weight: 500;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #555555 !important;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: #c2996b !important;
+}
+
+/* Form Bản tin (Gạch dưới tinh tế) */
+.newsletter-form {
+    position: relative;
+    margin-top: 25px;
+}
+
+.newsletter-form input {
+    width: 100%;
+    padding: 12px 60px 12px 0px;
+    background-color: transparent !important;
+    border: none !important;
+    border-bottom: 1px solid #cccccc !important;
+    color: #111111 !important;
+    font-size: 14px;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.newsletter-form input:focus {
+    border-bottom-color: #111111 !important;
+}
+
+.newsletter-form input::placeholder {
+    color: #999999 !important;
+}
+
+.newsletter-form button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent !important;
+    border: none !important;
+    color: #111111 !important;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.newsletter-form button:hover {
+    color: #c2996b !important;
+}
+
+/* Bản quyền dưới đáy */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px auto 0 auto;
+    padding: 25px 20px 0 20px;
+    border-top: 1px solid #eeeeee !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #888888 !important;
+    margin: 0;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-socials a {
+    color: #555555 !important;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.footer-socials a:hover {
+    color: #c2996b !important;
+}
+
+/* Mũi tên tròn cuộn lên đầu trang */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background-color: #111111 !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff !important;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: background-color 0.2s;
+    z-index: 999;
+}
+
+.scroll-to-top:hover {
+    background-color: #c2996b !important;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE CHO THIẾT BỊ DI ĐỘNG
+   ========================================================================== */
+@media (max-width: 768px) {
+    .main-header, .footer-container, .footer-bottom, .form-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .menu {
+        width: 100%;
+        justify-content: flex-start;
+    }
+.hero-banner {
+    max-width: 1200px;
+    height: 520px;
+    margin: 0 auto 50px auto;
+    /* Cập nhật lại đường dẫn chính xác đến thư mục img */
+    background-image: linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.35)), url('../img/Banner2.png'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    width: 100%;
+}
+
+    .banner-title {
+        font-size: 36px;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .footer-bottom p {
+        order: 2;
+    }
+    
+    .footer-socials {
+        order: 1;
+        gap: 15px;
+    }
+}
+/* CSS giúp ảnh trong bài viết hiển thị chuẩn đẹp*/
+/*Điểm nhấn từ bộ Sofa Bắc Âu*/
+.blog-inside-img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}

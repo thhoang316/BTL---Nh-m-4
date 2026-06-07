@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phòng Khách - JYSK Viet Nam</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Liên kết đồng bộ với hệ thống style chung -->
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/phongkhach.css" />
+  </head>
+
+  <body>
+    <div id="backToTop">↑</div>
+
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <span>✨ Cảm hứng Bắc Âu đương đại — Giao hàng & lắp đặt tận nơi</span>
+        <div class="top-links">
+          <a href="showroom.html">Hệ thống Showroom</a>
+          <a href="y-tuong-khong-gian.html">Ý tưởng không gian</a>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="container header-main">
+        <div class="logo">
+          <a href="index.html">JYSK<span class="gold-dot">.</span></a>
+        </div>
+
+        <!-- 🌟 ĐÃ ĐỒNG BỘ: Thay thế ô tìm kiếm bằng Menu điều hướng chuẩn -->
+        <nav class="main-nav">
+          <a href="cuahang.html" class="active">Cửa hàng</a>
+          <a href="about.html">Về chúng tôi</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+
+        <div class="header-icons">
+          <div class="icon-item account-item" id="accountContainer">
+            <a href="login.html" class="account-link" id="accountBtn">
+              <span style="font-size: 22px">👤</span>
+              <span class="icon-text" id="accountText">Tài khoản</span>
+            </a>
+            <div class="account-dropdown" id="accountDropdownMenu"></div>
+          </div>
+
+          <div class="icon-item">
+            <a
+              href="giohang.html"
+              style="position: relative; text-decoration: none"
+            >
+              <span style="font-size: 22px">🛒</span>
+              <span class="icon-text">Giỏ hàng</span>
+              <small class="cart-count">0</small>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <nav class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span class="separator">/</span>
+        <span class="current">Phòng khách</span>
+      </nav>
+
+      <div
+        class="category-hero"
+        style="background-image: url(&quot;../Img/living1.png&quot;)"
+      >
+        <div class="hero-overlay-box">
+          <h1>Phòng Khách</h1>
+          <p>
+            Trái tim của ngôi nhà. Khám phá bộ sưu tập sofa, bàn trà và tủ kệ
+            mang thiết kế Scandinavian tối giản, giúp gắn kết các thành viên
+            trong gia đình.
+          </p>
+        </div>
+      </div>
+
+      <div class="shop-layout">
+        <aside class="shop-sidebar">
+          <div class="filter-widget">
+            <h3>Danh mục</h3>
+            <ul class="filter-list category-links">
+              <li>
+                <a href="#" class="active" data-category="all"
+                  >Tất cả sản phẩm</a
+                >
+              </li>
+              <li><a href="#" data-category="sofa">Sofa & Ghế băng (24)</a></li>
+              <li>
+                <a href="#" data-category="ban-tra">Bàn trà & Bàn góc (15)</a>
+              </li>
+              <li><a href="#" data-category="ke-tivi">Kệ Tivi (8)</a></li>
+              <li>
+                <a href="#" data-category="ghe-thu-gian">Ghế thư giãn (12)</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter-widget">
+            <h3>Mức giá</h3>
+            <ul class="filter-list checkbox-list">
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    class="price-filter"
+                    data-min="0"
+                    data-max="5000000"
+                  />
+                  Dưới 5.000.000đ
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    class="price-filter"
+                    data-min="5000000"
+                    data-max="10000000"
+                  />
+                  5.000.000đ - 10.000.000đ
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    class="price-filter"
+                    data-min="10000000"
+                    data-max="20000000"
+                  />
+                  10.000.000đ - 20.000.000đ
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input
+                    type="checkbox"
+                    class="price-filter"
+                    data-min="20000000"
+                    data-max="999999999"
+                  />
+                  Trên 20.000.000đ
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter-widget">
+            <h3>Màu sắc</h3>
+            <div class="color-options">
+              <span
+                class="color-dot"
+                style="background-color: #f5f5f5"
+                title="Trắng"
+                data-color="trang"
+              ></span>
+              <span
+                class="color-dot"
+                style="background-color: #dfb78c"
+                title="Vàng gỗ"
+                data-color="vang-go"
+              ></span>
+              <span
+                class="color-dot"
+                style="background-color: #555555"
+                title="Xám"
+                data-color="xam"
+              ></span>
+              <span
+                class="color-dot"
+                style="background-color: #121b2b"
+                title="Đen/Xanh đậm"
+                data-color="den"
+              ></span>
+            </div>
+          </div>
+        </aside>
+
+        <div class="shop-main">
+          <div class="shop-top-bar">
+            <div class="results-count">
+              Hiển thị <strong>1-4</strong> của <strong>4</strong> sản phẩm
+            </div>
+            <div class="sort-by">
+              <label for="sort">Sắp xếp theo:</label>
+              <select id="sort">
+                <option value="moi-nhat">Mới nhất</option>
+                <option value="ban-chay">Bán chạy nhất</option>
+                <option value="gia-thap-cao">Giá: Thấp đến Cao</option>
+                <option value="gia-cao-thap">Giá: Cao xuống Thấp</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="jysk-products-grid shop-grid">
+            <div
+              class="product-card"
+              data-category="sofa"
+              data-price="15000000"
+              data-color="xam"
+              data-sales="12"
+              data-date="2026-05-20"
+            >
+              <div class="img-container">
+                <a href="SP_EKTORP_1.html">
+                  <img src="../Img/living2.jpg" alt="Sofa EKTORP" />
+                </a>
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">Sofa & Ghế Băng</span>
+                <h3 class="prod-title">
+                  <a href="SP_EKTORP_1.html">EKTORP - Sofa xám trắng cao cấp</a>
+                </h3>
+                <div class="rating-row">★★★★★ <span>(12)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">15.000.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-category="ban-tra"
+              data-price="3200000"
+              data-color="xam"
+              data-sales="8"
+              data-date="2026-04-15"
+            >
+              <div class="img-container">
+                <img src="../Img/living3.png" alt="Bàn trà gỗ sồi" />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">Bàn Trà</span>
+                <h3 class="prod-title">
+                  <a href="#">VEDBO - Bàn trà gỗ sồi mặt tròn thanh lịch</a>
+                </h3>
+                <div class="rating-row">★★★★☆ <span>(8)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">3.200.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-category="ke-tivi"
+              data-price="5500000"
+              data-color="den"
+              data-sales="24"
+              data-date="2026-03-10"
+            >
+              <div class="img-container">
+                <img src="../Img/living4.jpg" alt="Tủ kệ Tivi" />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">Kệ Tivi</span>
+                <h3 class="prod-title">
+                  <a href="#">FJALLBO - Hệ tủ kệ Tivi phong cách Industrial</a>
+                </h3>
+                <div class="rating-row">★★★★★ <span>(24)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">5.500.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-card"
+              data-category="ban-tra"
+              data-price="5500000"
+              data-color="den"
+              data-sales="24"
+              data-date="2026-03-10"
+            >
+              <div class="img-container">
+                <img src="../Img/living6.png" alt="Bàn trà hiện đại" />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">BÀN TRÀ</span>
+                <h3 class="prod-title">
+                  <a href="#">FJALLBO - Bàn trà hiện đại</a>
+                </h3>
+                <div class="rating-row">★★★★★ <span>(24)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">4.500.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-card"
+              data-category="sofa"
+              data-price="5500000"
+              data-color="den"
+              data-sales="24"
+              data-date="2026-03-10"
+            >
+              <div class="img-container">
+                <img src="../Img/living7.png" alt="Sofa đa năng" />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">Sofa & Ghế băng</span>
+                <h3 class="prod-title">
+                  <a href="#">EKTORK - Sofa đa năng</a>
+                </h3>
+                <div class="rating-row">★★★★★ <span>(24)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">9.500.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-card"
+              data-category="ke-tivi"
+              data-price="5500000"
+              data-color="den"
+              data-sales="24"
+              data-date="2026-03-10"
+            >
+              <div class="img-container">
+                <img src="../Img/living8.png" alt="Tủ kệ Tivi" />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">Kệ Tivi</span>
+                <h3 class="prod-title">
+                  <a href="#">VEDBO - Tủ tích hợp chân kê loa</a>
+                </h3>
+                <div class="rating-row">★★★★★ <span>(24)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">8.500.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-card"
+              data-category="ban-tra"
+              data-price="5500000"
+              data-color="den"
+              data-sales="24"
+              data-date="2026-03-10"
+            >
+              <div class="img-container">
+                <img src="../Img/living9.png" alt="Bàn trà phòng khách" />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">BÀN TRÀ</span>
+                <h3 class="prod-title">
+                  <a href="#">FACLUB - Bàn trà phòng khách</a>
+                </h3>
+                <div class="rating-row">★★★★★ <span>(24)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">2.500.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-card"
+              data-category="ban-tra"
+              data-price="5500000"
+              data-color="den"
+              data-sales="24"
+              data-date="2026-03-10"
+            >
+              <div class="img-container">
+                <img src="../Img/living10.jpg" alt="Bàn trà mặt kính" />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">BÀN TRÀ</span>
+                <h3 class="prod-title">
+                  <a href="#">EMIRI - Bàn trà mặt kính</a>
+                </h3>
+                <div class="rating-row">★★★★★ <span>(24)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">5.500.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-card"
+              data-category="sofa"
+              data-price="5500000"
+              data-color="den"
+              data-sales="24"
+              data-date="2026-03-10"
+            >
+              <div class="img-container">
+                <img
+                  src="../Img/living11.png"
+                  alt="Sofa phong cách Industrial"
+                />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">Sofa & Ghế băng</span>
+                <h3 class="prod-title">
+                  <a href="#">FJALLBO - Sofa phong cách Industrial</a>
+                </h3>
+                <div class="rating-row">★★★★★ <span>(24)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">9.500.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="product-card"
+              data-category="ghe-thu-gian"
+              data-price="6800000"
+              data-color="trang"
+              data-sales="45"
+              data-date="2026-05-25"
+            >
+              <div class="img-container">
+                <img src="../Img/living5.jpg" alt="Ghế thư giãn" />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">Ghế Thư Giãn</span>
+                <h3 class="prod-title">
+                  <a href="#">STRANDMON - Ghế tựa thư giãn</a>
+                </h3>
+                <div class="rating-row">★★★★★ <span>(45)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">6.800.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <a href="#" class="page-btn active">1</a>
+            <a href="#" class="page-btn">2</a>
+            <a href="#" class="page-btn">3</a>
+            <a href="#" class="page-btn next-btn">Tiếp →</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-column">
+          <div class="logo" style="margin-bottom: 20px">
+            <a href="#" style="color: rgb(13, 9, 24)"
+              >JYSK<span class="gold-dot">.</span></a
+            >
+          </div>
+          <p>
+            Chúng tôi kiến tạo không gian sống hiện đại, mang đậm triết lý thiết
+            kế tinh tế và tối giản từ Bắc Âu.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4>Sản phẩm</h4>
+          <ul>
+            <li><a href="phongkhach.html">Phòng khách</a></li>
+            <li><a href="Phongngu.html">Phòng ngủ</a></li>
+            <li><a href="Phongbep.html">Phòng bếp & Phòng ăn</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Hỗ trợ khách hàng</h4>
+          <ul>
+            <li><a href="#">Chính sách bảo hành</a></li>
+            <li><a href="#">Chính sách đổi trả</a></li>
+            <li><a href="blog.html">Blog cảm hứng</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Đăng ký đặc quyền</h4>
+          <p>Nhận ngay e-book xu hướng nội thất 2026 mới nhất.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Nhập email của bạn..." />
+            <button>Gửi</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-flex">
+          <p>© 2026 JYSK Studio. Premium Concept Store.</p>
+          <p>Inspired by Nordic Design Philosophy.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/auth.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        let currentCategory = "all";
+        let selectedColors = [];
+        let selectedPriceRanges = [];
+
+        // 1. Lọc theo Danh mục
+        $(".category-links a").click(function (e) {
+          e.preventDefault();
+          $(".category-links a").removeClass("active");
+          $(this).addClass("active");
+          currentCategory = $(this).data("category");
+          applyFilters();
+        });
+
+        // 2. Lọc theo Mức giá
+        $(".price-filter").change(function () {
+          selectedPriceRanges = [];
+          $(".price-filter:checked").each(function () {
+            selectedPriceRanges.push({
+              min: parseFloat($(this).data("min")),
+              max: parseFloat($(this).data("max")),
+            });
+          });
+          applyFilters();
+        });
+
+        // 3. Lọc theo Màu sắc
+        $(".color-options .color-dot").click(function () {
+          $(this).toggleClass("selected");
+          selectedColors = [];
+          $(".color-options .color-dot.selected").each(function () {
+            selectedColors.push($(this).data("color"));
+          });
+          applyFilters();
+        });
+
+        // 4. Sắp xếp sản phẩm
+        $("#sort").change(function () {
+          sortProducts($(this).val());
+        });
+
+        function applyFilters() {
+          let visibleCount = 0;
+          $(".shop-grid .product-card").each(function () {
+            let $card = $(this);
+            let cardCat = $card.data("category");
+            let cardPrice = parseFloat($card.data("price"));
+            let cardColor = $card.data("color");
+
+            let matchCat =
+              currentCategory === "all" || cardCat === currentCategory;
+
+            let matchPrice = false;
+            if (selectedPriceRanges.length === 0) {
+              matchPrice = true;
+            } else {
+              for (let i = 0; i < selectedPriceRanges.length; i++) {
+                if (
+                  cardPrice >= selectedPriceRanges[i].min &&
+                  cardPrice <= selectedPriceRanges[i].max
+                ) {
+                  matchPrice = true;
+                  break;
+                }
+              }
+            }
+
+            let matchColor =
+              selectedColors.length === 0 || selectedColors.includes(cardColor);
+
+            if (matchCat && matchPrice && matchColor) {
+              $card.fadeIn(200);
+              visibleCount++;
+            } else {
+              $card.fadeOut(200);
+            }
+          });
+
+          $(".results-count").html(
+            `Hiển thị <strong>1-${visibleCount}</strong> của <strong>${visibleCount}</strong> sản phẩm`,
+          );
+        }
+
+        function sortProducts(criteria) {
+          let $grid = $(".shop-grid");
+          let $products = $grid.children(".product-card").get();
+
+          $products.sort(function (a, b) {
+            let priceA = parseFloat($(a).data("price"));
+            let priceB = parseFloat($(b).data("price"));
+            let salesA = parseInt($(a).data("sales"));
+            let salesB = parseInt($(b).data("sales"));
+            let dateA = new Date($(a).data("date"));
+            let dateB = new Date($(b).data("date"));
+
+            if (criteria === "gia-thap-cao") return priceA - priceB;
+            if (criteria === "gia-cao-thap") return priceB - priceA;
+            if (criteria === "ban-chay") return salesB - salesA;
+            if (criteria === "moi-nhat") return dateB - dateA;
+            return 0;
+          });
+
+          $.each($products, function (idx, item) {
+            $grid.append(item);
+          });
+        }
+
+        // Tương tác Giỏ hàng & Cuộn trang
+        let count = 0;
+        $(".add-to-cart-action").click(function () {
+          count++;
+          $(".cart-count").text(count).css("transform", "scale(1.3)");
+          setTimeout(() => {
+            $(".cart-count").css("transform", "scale(1)");
+          }, 200);
+        });
+
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 150) $("#backToTop").addClass("show");
+          else $("#backToTop").removeClass("show");
+        });
+        $("#backToTop").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 400);
+        });
+      });
+    </script>
+  </body>
+</html>

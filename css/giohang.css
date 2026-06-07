@@ -1,0 +1,249 @@
+/* ==========================================================================
+   CSS DÀNH RIÊNG CHO TRANG GIỎ HÀNG (SCANDINAVIAN CONCEPT)
+   ========================================================================== */
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-wrapper {
+  margin-top: 40px;
+  margin-bottom: 90px;
+}
+
+.cart-page-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #121b2b;
+  margin-bottom: 30px;
+}
+
+/* KHUNG CHIA 2 KHỐI CHÍNH */
+.cart-container-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* CỘT TRÁI - DANH SÁCH SẢN PHẨM */
+.cart-items-column {
+  flex-grow: 1;
+  width: 65%;
+}
+
+/* Từng hàng sản phẩm */
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f4;
+}
+
+.item-product-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.item-img-box {
+  width: 90px;
+  height: 90px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  border: 1px solid #eef0f4;
+}
+
+.item-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.item-details-box .item-cat {
+  font-size: 0.75rem;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.item-details-box .item-title {
+  font-size: 1.05rem;
+  color: #121b2b;
+  margin: 3px 0 6px 0;
+  font-weight: 600;
+}
+
+.item-details-box .item-unit-price {
+  font-size: 0.95rem;
+  color: #788291;
+}
+
+/* Khu vực thao tác số lượng, thành tiền, xóa */
+.item-actions-zone {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.item-qty-control {
+  display: flex;
+  border: 1px solid #dcdce2;
+  border-radius: 4px;
+}
+
+.item-qty-control button {
+  width: 30px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.item-qty-control input {
+  width: 35px;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-left: 1px solid #dcdce2;
+  border-right: 1px solid #dcdce2;
+}
+
+.item-subtotal-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #121b2b;
+  width: 110px;
+  text-align: right;
+}
+
+.btn-remove-item {
+  background: none;
+  border: none;
+  color: #a0a0a0;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.btn-remove-item:hover {
+  color: #dc3545;
+}
+
+/* CỘT PHẢI - BẢNG TỔNG TIỀN */
+.cart-summary-column {
+  width: 35%;
+}
+
+.summary-box {
+  background-color: #fbfafa;
+  border-radius: 8px;
+  padding: 30px;
+  border: 1px solid #f0eff2;
+}
+
+.summary-title {
+  font-size: 1.3rem;
+  color: #121b2b;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.98rem;
+  color: #4b5563;
+}
+
+.free-shipping {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.summary-divider {
+  border: none;
+  border-top: 1px solid #eef0f4;
+  margin: 20px 0;
+}
+
+.total-row {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #121b2b;
+  margin-bottom: 25px;
+}
+
+.checkout-btn {
+  width: 100%;
+  height: 50px;
+  background-color: #121b2b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 15px;
+}
+
+.checkout-btn:hover {
+  background-color: #dfb78c;
+}
+
+.continue-shopping {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #788291;
+  text-decoration: none;
+}
+
+.continue-shopping:hover {
+  color: #121b2b;
+}
+
+/* TRẠNG THÁI GIỎ HÀNG TRỐNG */
+.empty-cart-state {
+  text-align: center;
+  padding: 60px 0;
+  color: #788291;
+}
+
+.empty-cart-state p {
+  margin: 15px 0 25px 0;
+  font-size: 1.1rem;
+}
+
+.btn-go-shopping {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #121b2b;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.btn-go-shopping:hover {
+  background-color: #dfb78c;
+}
+
+/* RESPONSIVE TRÊN THIẾT BỊ DI ĐỘNG */
+@media (max-width: 992px) {
+  .cart-container-layout {
+    flex-direction: column;
+  }
+  .cart-items-column,
+  .cart-summary-column {
+    width: 100%;
+  }
+}

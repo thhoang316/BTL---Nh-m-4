@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ Hàng Của Bạn - JYSK Viet Nam</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/giohang.css" />
+  </head>
+
+  <body>
+    <div id="backToTop">↑</div>
+
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <span>✨ Cảm hứng Bắc Âu đương đại — Giao hàng & lắp đặt tận nơi</span>
+        <div class="top-links">
+          <a href="#">Hệ thống Showroom</a>
+          <a href="#">Ý tưởng không gian</a>
+        </div>
+      </div>
+    </div>
+
+    <header>
+      <div class="container header-main">
+        <div class="logo">
+          <a href="index.html">JYSK<span class="gold-dot">.</span></a>
+        </div>
+
+        <nav class="main-nav">
+          <a href="cuahang.html">Cửa hàng</a>
+          <a href="#">Về chúng tôi</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+
+        <div class="header-icons">
+          <div class="icon-item account-item" id="accountContainer">
+            <a href="login.html" class="account-link" id="accountBtn">
+              <span style="font-size: 22px">👤</span>
+              <span class="icon-text" id="accountText">Tài khoản</span>
+            </a>
+            <div class="account-dropdown" id="accountDropdownMenu"></div>
+          </div>
+
+          <div class="icon-item">
+            <a
+              href="giohang.html"
+              style="position: relative; text-decoration: none"
+            >
+              <span style="font-size: 22px">🛒</span>
+              <span class="icon-text">Giỏ hàng</span>
+              <small class="cart-count">0</small>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container cart-wrapper">
+      <h1 class="cart-page-title">Giỏ hàng của bạn</h1>
+
+      <div class="cart-container-layout">
+        <div class="cart-items-column" id="cartItemsList"></div>
+
+        <div class="cart-summary-column">
+          <div class="summary-box">
+            <h3 class="summary-title">Tóm tắt đơn hàng</h3>
+
+            <div class="summary-row">
+              <span>Tạm tính</span>
+              <span id="subtotalPrice">0đ</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Phí vận chuyển</span>
+              <span class="free-shipping">Miễn phí</span>
+            </div>
+
+            <hr class="summary-divider" />
+
+            <div class="summary-row total-row">
+              <span>Tổng cộng</span>
+              <span id="finalTotalPrice">0đ</span>
+            </div>
+
+            <button class="checkout-btn" id="btnProcessCheckout">
+              Tiến hành thanh toán
+            </button>
+
+            <a href="index.html" class="continue-shopping"
+              >← Tiếp tục mua sắm</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-column">
+          <div class="logo" style="margin-bottom: 20px">
+            <a href="#" style="color: rgb(13, 9, 24)"
+              >JYSK<span class="gold-dot">.</span></a
+            >
+          </div>
+          <p>
+            Chúng tôi kiến tạo không gian sống hiện đại, mang đậm triết lý thiết
+            kế tinh tế và tối giản từ Bắc Âu.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-flex">
+          <p>© 2026 JYSK Studio. Premium Concept Store.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>
+      $(document).ready(function () {
+        // 1. Hàm định dạng tiền tệ sang dạng có dấu chấm (Ví dụ: 15000000 -> 15.000.000đ)
+        function formatMoney(amount) {
+          return amount.toLocaleString("vi-VN") + "đ";
+        }
+
+        // 2. Hàm render danh sách sản phẩm từ localStorage và tính toán tiền
+        function renderCartStructure() {
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          let $listContainer = $("#cartItemsList");
+          $listContainer.empty(); // Xóa trắng dữ liệu cũ trước khi nạp mới
+
+          // Cập nhật số lượng hiển thị trên Badge icon của Header
+          let totalBadgeQty = cart.reduce(
+            (sum, item) => sum + item.quantity,
+            0,
+          );
+          $(".cart-count").text(totalBadgeQty);
+
+          if (cart.length === 0) {
+            $listContainer.html(`
+              <div class="empty-cart-state">
+                <span style="font-size: 50px;">🛒</span>
+                <p>Giỏ hàng của bạn đang trống rỗng.</p>
+                <a href="index.html" class="btn-go-shopping">Mua sắm ngay</a>
+              </div>
+            `);
+            $("#subtotalPrice").text("0đ");
+            $("#finalTotalPrice").text("0đ");
+            return;
+          }
+
+          let subtotal = 0;
+
+          // Lặp qua từng sản phẩm để build HTML
+          cart.forEach((product, index) => {
+            let itemTotal = product.price * product.quantity;
+            subtotal += itemTotal;
+
+            // Chú ý đường dẫn hình ảnh đã được định dạng tương đối động từ thuộc tính product.img
+            let itemHtml = `
+              <div class="cart-item-row" data-index="${index}">
+                <div class="item-product-info">
+                  <div class="item-img-box">
+                    <img src="${product.img}" alt="${product.name}">
+                  </div>
+                  <div class="item-details-box">
+                    <span class="item-cat">${product.cat || "Nội thất"}</span>
+                    <h4 class="item-title">${product.name}</h4>
+                    <span class="item-unit-price">${formatMoney(product.price)}</span>
+                  </div>
+                </div>
+
+                <div class="item-actions-zone">
+                  <div class="item-qty-control">
+                    <button class="btn-cart-qty-minus" data-index="${index}">-</button>
+                    <input type="number" class="cart-qty-input" value="${product.quantity}" readonly />
+                    <button class="btn-cart-qty-plus" data-index="${index}">+</button>
+                  </div>
+                  <div class="item-subtotal-price">${formatMoney(itemTotal)}</div>
+                  <button class="btn-remove-item" data-index="${index}" title="Xóa khỏi giỏ">✕</button>
+                </div>
+              </div>
+            `;
+            $listContainer.append(itemHtml);
+          });
+
+          // Cập nhật tổng tiền vào bảng bên phải
+          $("#subtotalPrice").text(formatMoney(subtotal));
+          $("#finalTotalPrice").text(formatMoney(subtotal));
+        }
+
+        // Khởi chạy load giỏ hàng ngay khi mở trang
+        renderCartStructure();
+
+        // 3. Xử lý khi nhấn nút tăng số lượng (+)
+        $(document).on("click", ".btn-cart-qty-plus", function () {
+          let idx = $(this).data("index");
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          cart[idx].quantity += 1;
+          localStorage.setItem("cart", JSON.stringify(cart));
+          renderCartStructure();
+        });
+
+        // 4. Xử lý khi nhấn nút giảm số lượng (-)
+        $(document).on("click", ".btn-cart-qty-minus", function () {
+          let idx = $(this).data("index");
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          if (cart[idx].quantity > 1) {
+            cart[idx].quantity -= 1;
+          } else {
+            // Nếu giảm xuống dưới 1 thì hỏi xem có muốn xóa không
+            if (
+              !confirm(
+                `Bạn có muốn xóa sản phẩm "${cart[idx].name}" khỏi giỏ hàng?`,
+              )
+            )
+              return;
+            cart.splice(idx, 1);
+          }
+          localStorage.setItem("cart", JSON.stringify(cart));
+          renderCartStructure();
+        });
+
+        // 5. Xử lý khi nhấn nút Xóa sản phẩm (✕)
+        $(document).on("click", ".btn-remove-item", function () {
+          let idx = $(this).data("index");
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          if (confirm(`Xóa sản phẩm "${cart[idx].name}" khỏi giỏ hàng?`)) {
+            cart.splice(idx, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCartStructure();
+          }
+        });
+
+        // 6. Xử lý nút tiến hành thanh toán
+        $("#btnProcessCheckout").click(function () {
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+          if (cart.length === 0) {
+            alert("Giỏ hàng trống, vui lòng chọn sản phẩm trước khi đặt hàng!");
+            return;
+          }
+          alert(
+            "Cảm ơn bạn đã đặt hàng! Chức năng thanh toán hóa đơn đang được xử lý.",
+          );
+        });
+
+        // 7. Nút back to top mượt mà
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 150) $("#backToTop").addClass("show");
+          else $("#backToTop").removeClass("show");
+        });
+        $("#backToTop").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 400);
+        });
+      });
+    </script>
+  </body>
+</html>

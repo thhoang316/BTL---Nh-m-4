@@ -1,0 +1,375 @@
+/* ==========================================================================
+   CSS DÀNH RIÊNG CHO TRANG DANH MỤC PHÒNG NGỦ (phongngu.css)
+   ========================================================================== */
+
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+/* --- BREADCRUMB --- */
+.breadcrumb {
+  padding: 20px 0;
+  font-size: 0.85rem;
+  color: #788291;
+}
+.breadcrumb a {
+  color: #121b2b;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+.breadcrumb a:hover {
+  color: #dfb78c;
+}
+.breadcrumb .separator {
+  margin: 0 8px;
+  color: #ccc;
+}
+.breadcrumb .current {
+  color: #788291;
+}
+
+/* --- HERO BANNER BAN ĐẦU (ĐÃ TÁCH ẢNH NỀN VÀO ĐÂY) --- */
+.category-hero {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+  background-image: url("../Img/home5.jpg"); /* Đường dẫn ảnh phòng ngủ */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+}
+
+.hero-overlay-box {
+  background: rgba(255, 255, 255, 0.92);
+  padding: 35px 40px;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.hero-overlay-box h1 {
+  font-size: 2.2rem;
+  color: #121b2b;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.hero-overlay-box p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- CẤU TRÚC BỐ CỤC CHÍNH --- */
+.shop-layout {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+/* SIDEBAR BỘ LỌC */
+.shop-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.filter-widget {
+  border-bottom: 1px solid #f0f0f4;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.filter-widget h3 {
+  font-size: 1.05rem;
+  color: #121b2b;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-list li {
+  margin-bottom: 12px;
+}
+
+/* Link danh mục */
+.category-links a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.category-links a:hover,
+.category-links a.active {
+  color: #dfb78c;
+  font-weight: 600;
+  transform: translateX(4px);
+}
+
+/* Checkbox lọc giá */
+.checkbox-list label {
+  font-size: 0.9rem;
+  color: #444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ô chấm chọn màu */
+.color-options {
+  display: flex;
+  gap: 12px;
+}
+
+.color-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.color-dot:hover {
+  transform: scale(1.15);
+}
+
+.color-dot.selected {
+  border: 2px solid #121b2b;
+  transform: scale(1.1);
+}
+
+.color-dot.selected::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  color: #121b2b;
+}
+
+/* KHU VỰC HIỂN THỊ SẢN PHẨM */
+.shop-main {
+  flex-grow: 1;
+}
+
+.shop-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f4;
+}
+
+.results-count {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.sort-by label {
+  font-size: 0.9rem;
+  color: #444;
+  margin-right: 8px;
+}
+
+.sort-by select {
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #333;
+  outline: none;
+}
+
+/* Lưới sản phẩm */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid #f0f0f4;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.img-container {
+  width: 100%;
+  height: 240px;
+  background: #f9f9f9;
+  overflow: hidden;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.product-card:hover .img-container img {
+  transform: scale(1.06);
+}
+
+.product-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.prod-cat {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #a0a0a0;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.prod-title {
+  margin: 0 0 10px 0;
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+
+.prod-title a {
+  color: #121b2b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.prod-title a:hover {
+  color: #dfb78c;
+}
+
+.rating-row {
+  color: #ffb800;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+}
+
+.rating-row span {
+  color: #888;
+  margin-left: 4px;
+}
+
+.price-action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.current-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #121b2b;
+}
+
+.add-to-cart-action {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #121b2b;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.add-to-cart-action:hover {
+  background: #dfb78c;
+}
+
+/* --- PHÂN TRANG --- */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+.page-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #f0f0f4;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+}
+
+.page-btn.next-btn {
+  width: auto;
+  padding: 0 20px;
+}
+
+.page-btn:hover,
+.page-btn.active {
+  background-color: #121b2b;
+  color: #fff;
+  border-color: #121b2b;
+}
+
+/* RESPONSIVE MÀN HÌNH MÁY TÍNH BẢNG & ĐIỆN THOẠI */
+@media (max-width: 992px) {
+  .shop-layout {
+    flex-direction: column;
+  }
+  .shop-sidebar {
+    width: 100%;
+  }
+  .shop-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+  .category-hero {
+    padding-left: 20px;
+    height: 280px;
+  }
+  .hero-overlay-box h1 {
+    font-size: 1.8rem;
+  }
+}

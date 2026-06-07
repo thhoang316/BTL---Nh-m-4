@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phòng Ngủ - JYSK Viet Nam</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Sử dụng chung hệ thống CSS Layout danh mục để tiết kiệm tài nguyên -->
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/phongngu.css" />
+  </head>
+
+  <body>
+    <div id="backToTop">↑</div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div class="container top-bar-content">
+        <span>✨ Cảm hứng Bắc Âu đương đại — Giao hàng & lắp đặt tận nơi</span>
+        <div class="top-links">
+          <a href="#">Hệ thống Showroom</a>
+          <a href="#">Ý tưởng không gian</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER ĐỒNG BỘ -->
+    <header>
+      <div class="container header-main">
+        <div class="logo">
+          <a href="index.html">JYSK<span class="gold-dot">.</span></a>
+        </div>
+
+        <nav class="main-nav">
+          <a href="cuahang.html" class="active">Cửa hàng</a>
+          <a href="about.html">Về chúng tôi</a>
+          <a href="blog.html">Blog</a>
+        </nav>
+
+        <div class="header-icons">
+          <div class="icon-item account-item" id="accountContainer">
+            <a href="login.html" class="account-link" id="accountBtn">
+              <span style="font-size: 22px">👤</span>
+              <span class="icon-text" id="accountText">Tài khoản</span>
+            </a>
+            <div class="account-dropdown" id="accountDropdownMenu"></div>
+          </div>
+
+          <div class="icon-item">
+            <a
+              href="giohang.html"
+              style="position: relative; text-decoration: none"
+            >
+              <span style="font-size: 22px">🛒</span>
+              <span class="icon-text">Giỏ hàng</span>
+              <small class="cart-count">0</small>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <nav class="breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span class="separator">/</span>
+        <a href="cuahang.html">Cửa hàng</a>
+        <span class="separator">/</span>
+        <span class="current">Phòng ngủ</span>
+      </nav>
+
+      <div
+        class="category-hero"
+        style="background-image: url(&quot;../Img/home3.png&quot;)"
+      >
+        <div class="hero-overlay-box">
+          <h1>Phòng Ngủ</h1>
+          <p>
+            Chốn yên bình cuối ngày. Khám phá các mẫu giường ngủ, tủ quần áo và
+            chăn ga gối đệm mang phong cách tối giản, nâng niu giấc ngủ của bạn.
+          </p>
+        </div>
+      </div>
+
+      <div class="shop-layout">
+        <!-- SIDEBAR BỘ LỌC PHÒNG NGỦ -->
+        <aside class="shop-sidebar">
+          <div class="filter-widget">
+            <h3>Danh mục</h3>
+            <ul class="filter-list category-links">
+              <li>
+                <a href="#" class="active" data-category="all"
+                  >Tất cả sản phẩm</a
+                >
+              </li>
+              <li>
+                <a href="SP_HAGA.html" data-category="giuong"
+                  >Giường ngủ (18)</a
+                >
+              </li>
+              <li>
+                <a href="SP_KARLSTAD.html" data-category="tu-ao"
+                  >Tủ quần áo (12)</a
+                >
+              </li>
+              <li>
+                <a href="SP_CHAN-GA.html" data-category="chan-ga"
+                  >Chăn ga gối (30)</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter-widget">
+            <h3>Mức giá</h3>
+            <ul class="filter-list checkbox-list">
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    class="price-filter"
+                    data-min="0"
+                    data-max="2000000"
+                  />
+                  Dưới 2.000.000đ</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    class="price-filter"
+                    data-min="2000000"
+                    data-max="10000000"
+                  />
+                  2.000.000đ - 10.000.000đ</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input
+                    type="checkbox"
+                    class="price-filter"
+                    data-min="10000000"
+                    data-max="999999999"
+                  />
+                  Trên 10.000.000đ</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="filter-widget">
+            <h3>Màu sắc</h3>
+            <div class="color-options">
+              <span
+                class="color-dot"
+                style="background-color: #f5f5f5"
+                title="Trắng"
+                data-color="trang"
+              ></span>
+              <span
+                class="color-dot"
+                style="background-color: #dfb78c"
+                title="Vàng gỗ"
+                data-color="vang-go"
+              ></span>
+              <span
+                class="color-dot"
+                style="background-color: #555555"
+                title="Xám"
+                data-color="xam"
+              ></span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- GRID SẢN PHẨM PHÒNG NGỦ -->
+        <div class="shop-main">
+          <div class="shop-top-bar">
+            <div class="results-count">
+              Hiển thị <strong>1-3</strong> của <strong>3</strong> sản phẩm
+            </div>
+            <div class="sort-by">
+              <label for="sort">Sắp xếp theo:</label>
+              <select id="sort">
+                <option value="moi-nhat">Mới nhất</option>
+                <option value="ban-chay">Bán chạy nhất</option>
+                <option value="gia-thap-cao">Giá: Thấp đến Cao</option>
+                <option value="gia-cao-thap">Giá: Cao xuống Thấp</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="jysk-products-grid shop-grid">
+            <!-- Sản phẩm 1 -->
+            <div
+              class="product-card"
+              data-category="giuong"
+              data-price="12000000"
+              data-color="vang-go"
+              data-sales="15"
+              data-date="2026-05-10"
+            >
+              <div class="img-container">
+                <img src="../Img/home9.png" alt="Giường ngủ gỗ sồi" />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">Giường Ngủ</span>
+                <h3 class="prod-title">
+                  <a href="SP_HAGA.html">HAGA - Giường ngủ gỗ sồi Bắc Âu</a>
+                </h3>
+                <div class="rating-row">★★★★★ <span>(15)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">12.000.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sản phẩm 2 -->
+            <div
+              class="product-card"
+              data-category="tu-ao"
+              data-price="8500000"
+              data-color="trang"
+              data-sales="22"
+              data-date="2026-04-18"
+            >
+              <div class="img-container">
+                <img src="../Img/bed1.jpg" alt="Tủ quần áo" />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">Tủ quần áo</span>
+                <h3 class="prod-title">
+                  <a href="SP_KLEPPSTAD.html"
+                    >KLEPPSTAD - Tủ áo tối giản sắc trắng</a
+                  >
+                </h3>
+                <div class="rating-row">★★★★☆ <span>(22)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">8.500.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sản phẩm 3 -->
+            <div
+              class="product-card"
+              data-category="chan-ga"
+              data-price="1800000"
+              data-color="xam"
+              data-sales="48"
+              data-date="2026-05-22"
+            >
+              <div class="img-container">
+                <img src="../Img/home5.jpg" alt="Bộ chăn ga xám" />
+              </div>
+              <div class="product-details">
+                <span class="prod-cat">Chăn ga gối</span>
+                <h3 class="prod-title">
+                  <a href="SP COTTON-PREMIUM.html"
+                    >COTTON PREMIUM - Bộ chăn ga gối xám chuẩn resort</a
+                  >
+                </h3>
+                <div class="rating-row">★★★★★ <span>(48)</span></div>
+                <div class="price-action-row">
+                  <span class="current-price">1.800.000đ</span>
+                  <button class="add-to-cart-action">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <a href="#" class="page-btn active">1</a>
+            <a href="#" class="page-btn">2</a>
+            <a href="#" class="page-btn next-btn">Tiếp →</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER ĐỒNG BỘ -->
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-column">
+          <div class="logo" style="margin-bottom: 20px">
+            <a href="#" style="color: rgb(13, 9, 24)"
+              >JYSK<span class="gold-dot">.</span></a
+            >
+          </div>
+          <p>
+            Chúng tôi kiến tạo không gian sống hiện đại, mang đậm triết lý thiết
+            kế tinh tế và tối giản từ Bắc Âu.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4>Sản phẩm</h4>
+          <ul>
+            <li><a href="phongkhach.html">Phòng khách</a></li>
+            <li><a href="Phongngu.html">Phòng ngủ</a></li>
+            <li><a href="Phongbep.html">Phòng bếp & Phòng ăn</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Hỗ trợ khách hàng</h4>
+          <ul>
+            <li><a href="#">Chính sách bảo hành</a></li>
+            <li><a href="#">Chính sách đổi trả</a></li>
+            <li><a href="blog.html">Blog cảm hứng</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Đăng ký đặc quyền</h4>
+          <p>Nhận ngay e-book xu hướng nội thất 2026 mới nhất.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Nhập email của bạn..." />
+            <button>Gửi</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-flex">
+          <p>© 2026 JYSK Studio. Premium Concept Store.</p>
+          <p>Inspired by Nordic Design Philosophy.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>
+      $(document).ready(function () {
+        let currentCategory = "all";
+        let selectedColors = [];
+        let selectedPriceRanges = [];
+
+        $(".category-links a").click(function (e) {
+          e.preventDefault();
+          $(".category-links a").removeClass("active");
+          $(this).addClass("active");
+          currentCategory = $(this).data("category");
+          applyFilters();
+        });
+
+        $(".price-filter").change(function () {
+          selectedPriceRanges = [];
+          $(".price-filter:checked").each(function () {
+            selectedPriceRanges.push({
+              min: parseFloat($(this).data("min")),
+              max: parseFloat($(this).data("max")),
+            });
+          });
+          applyFilters();
+        });
+
+        $(".color-options .color-dot").click(function () {
+          $(this).toggleClass("selected");
+          selectedColors = [];
+          $(".color-options .color-dot.selected").each(function () {
+            selectedColors.push($(this).data("color"));
+          });
+          applyFilters();
+        });
+
+        $("#sort").change(function () {
+          sortProducts($(this).val());
+        });
+
+        function applyFilters() {
+          let visibleCount = 0;
+          $(".shop-grid .product-card").each(function () {
+            let $card = $(this);
+            let cardCat = $card.data("category");
+            let cardPrice = parseFloat($card.data("price"));
+            let cardColor = $card.data("color");
+
+            let matchCat =
+              currentCategory === "all" || cardCat === currentCategory;
+
+            let matchPrice = false;
+            if (selectedPriceRanges.length === 0) {
+              matchPrice = true;
+            } else {
+              for (let i = 0; i < selectedPriceRanges.length; i++) {
+                if (
+                  cardPrice >= selectedPriceRanges[i].min &&
+                  cardPrice <= selectedPriceRanges[i].max
+                ) {
+                  matchPrice = true;
+                  break;
+                }
+              }
+            }
+
+            let matchColor =
+              selectedColors.length === 0 || selectedColors.includes(cardColor);
+
+            if (matchCat && matchPrice && matchColor) {
+              $card.fadeIn(200);
+              visibleCount++;
+            } else {
+              $card.fadeOut(200);
+            }
+          });
+          $(".results-count").html(
+            `Hiển thị <strong>1-${visibleCount}</strong> của <strong>${visibleCount}</strong> sản phẩm`,
+          );
+        }
+
+        function sortProducts(criteria) {
+          let $grid = $(".shop-grid");
+          let $products = $grid.children(".product-card").get();
+          $products.sort(function (a, b) {
+            let priceA = parseFloat($(a).data("price"));
+            let priceB = parseFloat($(b).data("price"));
+            let salesA = parseInt($(a).data("sales"));
+            let salesB = parseInt($(b).data("sales"));
+            let dateA = new Date($(a).data("date"));
+            let dateB = new Date($(b).data("date"));
+
+            if (criteria === "gia-thap-cao") return priceA - priceB;
+            if (criteria === "gia-cao-thap") return priceB - priceA;
+            if (criteria === "ban-chay") return salesB - salesA;
+            if (criteria === "moi-nhat") return dateB - dateA;
+            return 0;
+          });
+          $.each($products, function (idx, item) {
+            $grid.append(item);
+          });
+        }
+
+        let count = 0;
+        $(".add-to-cart-action").click(function () {
+          count++;
+          $(".cart-count").text(count).css("transform", "scale(1.3)");
+          setTimeout(() => {
+            $(".cart-count").css("transform", "scale(1)");
+          }, 200);
+        });
+
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 150) $("#backToTop").addClass("show");
+          else $("#backToTop").removeClass("show");
+        });
+        $("#backToTop").click(function () {
+          $("html, body").animate({ scrollTop: 0 }, 400);
+        });
+      });
+    </script>
+  </body>
+</html>
